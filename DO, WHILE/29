@@ -1,0 +1,52 @@
+#include <stdio.h>
+
+int main() {
+    int aluno = 1;
+    float media, mediaTurma = 0.0;
+
+    do {
+        int nota = 1;
+        float somaPesos = 0.0, somaNotas = 0.0;
+
+        printf("Notas do aluno %d:\n", aluno);
+
+        do {
+            float peso;
+
+            if (nota == 1)
+                peso = 3.0;
+            else
+                peso = 1.0;
+
+            printf("Digite a nota %d: ", nota);
+            scanf("%f", &media);
+
+            somaNotas += media * peso;
+            somaPesos += peso;
+
+            nota++;
+        } while (nota <= 4);
+
+        media = somaNotas / somaPesos;
+        mediaTurma += media;
+
+        printf("Média do aluno %d: %.2f\n", aluno, media);
+
+        if (media >= 6.0)
+            printf("Aluno %d passou.\n", aluno);
+        else if (media >= 4.0)
+            printf("Aluno %d vai para a recuperação. Precisa de %.2f pontos para ser aprovado.\n", aluno, 6.0 - media);
+        else
+            printf("Aluno %d não passou.\n", aluno);
+
+        printf("\n");
+
+        aluno++;
+    } while (aluno <= 5);
+
+    float mediaFinalTurma = mediaTurma / 5.0;
+    printf("Média da turma: %.2f\n", mediaFinalTurma);
+
+    return 0;
+}
+

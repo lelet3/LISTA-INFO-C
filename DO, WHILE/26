@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    int lado, linha, coluna;
+
+    printf("Digite o tamanho do lado do quadrado (entre 1 e 20): ");
+    scanf("%d", &lado);
+
+    if (lado < 1 || lado > 20) {
+        printf("Tamanho do lado inválido!\n");
+        return 0;
+    }
+
+    for (linha = 0; linha < lado; linha++) {
+        for (coluna = 0; coluna < lado; coluna++) {
+            printf("* ");
+        }
+        printf("\n");
+    }
+
+    return 0;
+}

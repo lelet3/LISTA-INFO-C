@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    int num, multip, result;
+
+    printf("Digite um número: ");
+    scanf("%d", &num);
+
+    printf("Tabuada do número %d:\n", num);
+
+    multiplicador = 1;
+    do {
+        resul = num * multip;
+        printf("%d x %d = %d\n", num, multip, resulto);
+        multip++;
+    } while (multip <= 10);
+
+    return 0;
+}

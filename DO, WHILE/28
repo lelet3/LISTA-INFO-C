@@ -1,0 +1,65 @@
+#include <stdio.h>
+
+int main() {
+    int idade, contador = 1, faixa1_10 = 0, faixa11_20 = 0, faixa21_30 = 0, faixaMais30 = 0;
+    float peso, soma1_10 = 0.0, soma11_20 = 0.0, soma21_30 = 0.0, somaMais30 = 0.0;
+
+    do {
+        printf("Digite a idade da pessoa %d: ", contador);
+        scanf("%d", &idade);
+
+        if (idade <= 0) {
+            break;
+        }
+
+        printf("Digite o peso da pessoa %d: ", contador);
+        scanf("%f", &peso);
+
+        if (idade >= 1 && idade <= 10) {
+            soma1_10 += peso;
+            faixa1_10++;
+        } else if (idade >= 11 && idade <= 20) {
+            soma11_20 += peso;
+            faixa11_20++;
+        } else if (idade >= 21 && idade <= 30) {
+            soma21_30 += peso;
+            faixa21_30++;
+        } else {
+            somaMais30 += peso;
+            faixaMais30++;
+        }
+
+        contador++;
+    } while (contador <= 15);
+
+    printf("\nMédias de peso por faixa etária:\n");
+
+    if (faixa1_10 > 0) {
+        float media1_10 = soma1_10 / faixa1_10;
+        printf("Faixa 1-10 anos: Média de peso %.2f kg\n", media1_10);
+    }
+
+    if (faixa11_20 > 0) {
+        float media11_20 = soma11_20 / faixa11_20;
+        printf("Faixa 11-20 anos: Média de peso %.2f kg\n", media11_20);
+    }
+
+    if (faixa21_30 > 0) {
+        float media21_30 = soma21_30 / faixa21_30;
+        printf("Faixa 21-30 anos: Média de peso %.2f kg\n", media21_30);
+    }
+
+    if (faixaMais30 > 0) {
+        float mediaMais30 = somaMais30 / faixaMais30;
+        printf("Maiores de 30 anos: Média de peso %.2f kg\n", mediaMais30);
+    }
+
+    printf("\nQuantidade de pessoas por faixa etária:\n");
+    printf("Faixa 1-10 anos: %d pessoas\n", faixa1_10);
+    printf("Faixa 11-20 anos: %d pessoas\n", faixa11_20);
+    printf("Faixa 21-30 anos: %d pessoas\n", faixa21_30);
+    printf("Maiores de 30 anos: %d pessoas\n", faixaMais30);
+
+    return 0;
+}
+
