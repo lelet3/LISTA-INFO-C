@@ -1,0 +1,14 @@
+#include <stdio.h>
+
+int main() {
+    int numeroDecimal;
+
+    printf("Digite um número decimal: ");
+    scanf("%d", &numeroDecimal);
+
+    printf("O número em hexadecimal é: %X\n", numeroDecimal);
+    printf("O número em octal é: %o\n", numeroDecimal);
+
+    return 0;
+}
+
