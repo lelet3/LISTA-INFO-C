@@ -1,0 +1,31 @@
+#include <stdio.h>
+
+int main() {
+    char carro;
+    float dist, consumo;
+
+    printf("Informe o tipo de carro (A, B ou C): ");
+    scanf(" %c", &carro);
+
+    printf("Informe a distância rodada em km: ");
+    scanf("%f", &dist);
+
+    switch (carro) {
+        case 'A':
+            consumo = dist / 8;
+            break;
+        case 'B':
+            consumo = dist / 9;
+            break;
+        case 'C':
+            consumo = dist / 12;
+            break;
+        default:
+            printf("Tipo de carro inválido!\n");
+            return 1;
+    }
+
+    printf("Consumo estimado: %.2f km/l\n", consumo);
+
+    return 0;
+}

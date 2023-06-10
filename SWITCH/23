@@ -1,0 +1,39 @@
+#include <stdio.h>
+
+int main() {
+    int mes;
+
+    printf("Digite o número do mês (1 a 12): ");
+    scanf("%d", &mes);
+
+    int dias;
+
+    switch (mes) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            dias = 31;
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            dias = 30;
+            break;
+        case 2:
+            dias = 28;
+            break;
+        default:
+            printf("Mês inválido!\n");
+            return 0;
+    }
+
+    printf("O mês %d possui %d dias.\n", mes, dias);
+
+    return 0;
+}
+
