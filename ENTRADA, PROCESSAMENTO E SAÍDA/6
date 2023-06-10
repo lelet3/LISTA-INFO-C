@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() {
+    float num1, num2, soma, prod, quadrado, raizquad;
+
+    printf("Digite o primeiro numero: ");
+    scanf("%f", &num1);
+
+    printf("Digite o segundo numero: ");
+    scanf("%f", &num2);
+
+    soma = num1 + num2;
+    prod = num1 * num2 * num2;
+    quadrado = pow(num1, 2);
+    raizquad = sqrt(pow(num1, 2) + pow(num2, 2));
+
+    printf("Soma dos numeros: %.3f\n", soma);
+    printf("Produto do primeiro numero pelo quadrado do segundo: %.3f\n", prod);
+    printf("Quadrado do primeiro numero: %.3f\n", quadrado);
+    printf("Raiz quadrada da soma dos quadrados: %.3f\n", raizquad);
+
+    return 0;
+}
