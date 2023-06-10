@@ -1,0 +1,22 @@
+#include <stdio.h>
+
+int main() {
+    float valorCompra, valorVenda;
+    float lucro;
+
+    printf("Digite o valor de compra do produto: ");
+    scanf("%f", &valorCompra);
+
+    if (valorCompra < 20.00) {
+        lucro = 0.45; // Lucro de 45% se valorCompra < 20.00
+    } else {
+        lucro = 0.30; // Lucro de 30% se valorCompra >= 20.00
+    }
+
+    valorVenda = valorCompra + (valorCompra * lucro);
+
+    printf("O valor de venda do produto é: %.2f\n", valorVenda);
+
+    return 0;
+}
+
